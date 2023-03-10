@@ -1,18 +1,21 @@
+import com.jamarfal.config.ConfigData
+import com.jamarfal.dependencies.Dependencies
+
 plugins {
-    id("com.android.application")
-    kotlin("android")
+    id(com.jamarfal.plugins.AppPlugins.androidApplication)
+    kotlin(com.jamarfal.plugins.AppPlugins.kotlinAndroid)
 }
 
 android {
-    namespace = "com.jamarfal.mycleanarchitecture"
-    compileSdk = 33
+    namespace = ConfigData.nameSpace
+    compileSdk = ConfigData.compileSdkVersion
 
     defaultConfig {
-        applicationId = "com.jamarfal.mycleanarchitecture"
-        minSdk = 24
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = ConfigData.applicationId
+        minSdk = ConfigData.minSdkVersion
+        targetSdk = ConfigData.targetSdkVersion
+        versionCode = ConfigData.versionCode
+        versionName = ConfigData.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -24,8 +27,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = org.gradle.api.JavaVersion.VERSION_11
-        targetCompatibility = org.gradle.api.JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
@@ -35,11 +38,7 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.1")
-    implementation("com.google.android.material:material:1.5.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.e(t:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation(Dependencies.AndroidX.coreKtx)
+    implementation(Dependencies.AndroidX.appCompat)
+    implementation(Dependencies.AndroidX.constraintLayout)
 }

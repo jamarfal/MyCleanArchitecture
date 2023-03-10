@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@jamarfal 
-jamarfal
-/
-MyCleanArchitecture
-Public
-Cannot fork because you own this repository and are not a member of any organizations.
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-MyCleanArchitecture/.gitignore
-@jamarfal
-jamarfal Initial commit
-Latest commit 59f323c now
- History
- 1 contributor
-85 lines (68 sloc)  1.4 KB
-
 # Built application files
 *.apk
 *.aar
